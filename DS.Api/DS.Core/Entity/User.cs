@@ -1,13 +1,9 @@
 ﻿using DS.Core.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
-namespace DS.Data.Entity
+namespace DS.Core.Entity
 {
-    public class User
+    public class User : IdentityUser<string>
     {
         public string? FullName { get; set; }
         public string? TaxCode { get; set; }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DS.Data.Entity
+namespace DS.Core.Entity
 {
     public class Document
     {
