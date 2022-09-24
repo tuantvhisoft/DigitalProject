@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DS.Data.Entity
+namespace DS.Core.Entity
 {
     public class Document
     {
@@ -21,5 +21,7 @@ namespace DS.Data.Entity
         public string? NameFile { get; set; }
         public string? FileExtension { get; set; }
         public bool IsInternal { get; set; }
+        public ICollection<Signer>? Singers { get; set; }
+        public ICollection<ExternalSigner>? ExternalSingers { get; set; }
     }
 }

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DS.Data.Entity
+namespace DS.Core.Entity
 {
     public class DocumentType
     {
         public int DocumentTypeId { get; set; }
         public string? DocumentTypeName { get; set; }
         public string? Temple { get; set; }
+        public ICollection<SignerDocType>? SignerDocTypes { get; set; }
     }
 }

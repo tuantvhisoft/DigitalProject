@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DS.Data.Entity
+namespace DS.Core.Entity
 {
-    public class InitialSinger
+    public class InitialSigner
     {
         public int InitialSignerId { get; set; }
         public string? InSignerStatus { get; set; }

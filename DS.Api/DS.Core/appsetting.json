@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DsDb": "Server=DESKTOP-8PA8D34\\SQLEXPRESS;Database=DS;Trusted_Connection=True;MultipleActiveResultSets=true;"
+  }
+}
