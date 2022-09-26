@@ -11,7 +11,8 @@ namespace DS.Core.Entity
         public int HsmInId { get; set; }
         public string? UserId { get; set; }
         public string? IdentityCard { get; set; }
-        public string TokenHsm { get; set; }
+        public string? TokenHsm { get; set; }
         public ICollection<HsmExpireTime>? HsmExpireTimes { get; set; }
+        public User? User { get; set; }
     }
 }

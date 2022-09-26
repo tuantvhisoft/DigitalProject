@@ -10,5 +10,7 @@ namespace DS.Core.Entity
     {
         public int InitialSignerId { get; set; }
         public string? InSignerStatus { get; set; }
+        public Signer? Signer { get; set; }
+        public ICollection<InitialDetail>? InitialDetails { get; set; }
     }
 }

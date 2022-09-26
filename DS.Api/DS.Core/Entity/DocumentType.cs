@@ -12,5 +12,7 @@ namespace DS.Core.Entity
         public string? DocumentTypeName { get; set; }
         public string? Temple { get; set; }
         public ICollection<SignerDocType>? SignerDocTypes { get; set; }
+        public ICollection<Document>? Document { get; set; }
+
     }
 }

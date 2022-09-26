@@ -10,7 +10,7 @@ namespace DS.Core.Entity
     {
         public int DocID { get; set; }
         public int StatusID { get; set; }
-        public int DocumenTypeId { get; set; }
+        public int DocumentTypeId { get; set; }
         public string? Type { get; set; }
         public string? Description { get; set; }
         public DateTime? StartDate { get; set; }
@@ -21,7 +21,9 @@ namespace DS.Core.Entity
         public string? NameFile { get; set; }
         public string? FileExtension { get; set; }
         public bool IsInternal { get; set; }
-        public ICollection<Signer>? Singers { get; set; }
+        public ICollection<Signer>? Signers { get; set; }
         public ICollection<ExternalSigner>? ExternalSingers { get; set; }
+        public Status? Status { get; set; }
+        public DocumentType? DocumentType { get; set; }
     }
 }

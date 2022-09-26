@@ -10,5 +10,6 @@ namespace DS.Core.Entity
     {
         public int StatusID { get; set; }
         public string? StatusName { get; set; }
+        public ICollection<Document>? Document { get; set; }
     }
 }

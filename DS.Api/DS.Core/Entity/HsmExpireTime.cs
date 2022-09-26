@@ -12,5 +12,6 @@ namespace DS.Core.Entity
         public int HsmInId { get; set; }
         public DateTime FromDateGet { get; set; }
         public DateTime ToDateExpire { get; set; }
+        public HsmInformation? HsmInformation { get; set; }
     }
 }

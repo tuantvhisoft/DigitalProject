@@ -13,7 +13,7 @@ namespace DS.Core.EF
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var connectionString = configuration.GetConnectionString("CeDb");
+            var connectionString = configuration.GetConnectionString("DsDb");
             var optionBuilder = new DbContextOptionsBuilder<DsDbContext>();
             optionBuilder.UseSqlServer(connectionString);
 
