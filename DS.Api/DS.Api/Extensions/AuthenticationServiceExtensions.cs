@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DS.Service.Sercurity;
+using DS.ViewModel.Accessors;
 
 namespace DS.Api.Extensions
 {
@@ -45,7 +46,7 @@ namespace DS.Api.Extensions
 
             services.AddHttpContextAccessor();
 
-            //services.AddTransient<IUserAccessor, UserAccessor>();
+            services.AddTransient<IUserAccessor, UserAccessor>();
             //services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
 
