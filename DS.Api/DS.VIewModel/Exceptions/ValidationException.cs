@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace Core.Exceptions
+namespace Ds.ViewModel.Exceptions
 {
     public class ValidationException : Exception
     {

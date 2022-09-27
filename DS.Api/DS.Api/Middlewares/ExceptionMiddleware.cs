@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.Text.Json;
+using Ds.ViewModel.Exceptions;
+using DS.ViewModel.Exceptions;
 using DS.ViewModel.Wrapper;
 
 namespace DS.Api.Middlewares
