@@ -24,6 +24,7 @@
   <ItemGroup>
     <None Remove="Configuration\DocumentTypeConfiguration" />
     <None Remove="appsettings.json" />
+    <None Remove="Enum\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="appsettings.json" Condition="'$(ExcludeConfigFilesFromBuildOutput)'!='true'">
@@ -31,5 +32,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enum\" />
   </ItemGroup>
 </Project>

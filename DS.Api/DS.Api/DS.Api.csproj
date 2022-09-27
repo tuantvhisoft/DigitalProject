@@ -15,6 +15,22 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DS.Core\DS.Core.csproj" />
+    <ProjectReference Include="..\DS.Service\DS.Service.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\DS.ViewModel\DS.ViewModel.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Middlewares\" />
+    <None Remove="Extensions\" />
+    <None Remove="Microsoft.AspNetCore.Http.Abstractions" />
+    <None Remove="Microsoft.AspNetCore.Http.Features" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
 </Project>

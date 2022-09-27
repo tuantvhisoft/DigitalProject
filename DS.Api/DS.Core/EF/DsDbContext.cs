@@ -28,7 +28,7 @@ namespace DS.Core.EF
             modelBuilder.ApplyConfiguration(new HSMExpireTimeConfiguration());
             modelBuilder.ApplyConfiguration(new SignerConfiguration());
             modelBuilder.ApplyConfiguration(new SignerDoctypeConfiguration());
-
+            modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
 
             modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("AppUserRoles").HasKey(x => new { x.UserId, x.RoleId });
@@ -39,6 +39,7 @@ namespace DS.Core.EF
 
         public DbSet<User> User { get; set; }
         public DbSet<Role> Role { get; set; }
+        public DbSet<UserRole> UserRole { get; set; }
         public DbSet<Document> Documents { get; set; }
         public DbSet<DocumentType> DocumentTypes { get; set; }
         public DbSet<ExternalSigner> ExternalSigners { get; set; }

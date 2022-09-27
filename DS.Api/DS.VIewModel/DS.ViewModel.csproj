@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="IRepositories\" />
+    <None Remove="Constants\" />
+    <None Remove="Wrapper\" />
+    <None Remove="FluentValidation" />
+    <None Remove="Helper\" />
+    <None Remove="UnitOfWork\" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore, Version=6.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
+    <None Remove="VModel\" />
+    <None Remove="VModel\Paging\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IRepositories\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Wrapper\" />
+    <Folder Include="Helper\" />
+    <Folder Include="UnitOfWork\" />
+    <Folder Include="VModel\" />
+    <Folder Include="VModel\Paging\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DS.Core\DS.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore, Version=6.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
+  </ItemGroup>
+</Project>

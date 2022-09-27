@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DS.Api", "DS.Api\DS.Api.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Core", "DS.Core\DS.Core.csproj", "{394B2852-38FC-49EB-9561-C8CDE3E5F088}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.ViewModel", "DS.ViewModel\DS.ViewModel.csproj", "{76ED6290-F584-45A4-A246-2C1F84F0420E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS.Service", "DS.Service\DS.Service.csproj", "{BB145A10-FAF2-4F02-A9FB-9782200F5F01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{394B2852-38FC-49EB-9561-C8CDE3E5F088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{394B2852-38FC-49EB-9561-C8CDE3E5F088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{394B2852-38FC-49EB-9561-C8CDE3E5F088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76ED6290-F584-45A4-A246-2C1F84F0420E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76ED6290-F584-45A4-A246-2C1F84F0420E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76ED6290-F584-45A4-A246-2C1F84F0420E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76ED6290-F584-45A4-A246-2C1F84F0420E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB145A10-FAF2-4F02-A9FB-9782200F5F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB145A10-FAF2-4F02-A9FB-9782200F5F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB145A10-FAF2-4F02-A9FB-9782200F5F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB145A10-FAF2-4F02-A9FB-9782200F5F01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
