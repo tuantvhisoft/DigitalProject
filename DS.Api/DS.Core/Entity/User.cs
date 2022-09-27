@@ -13,8 +13,8 @@ namespace DS.Core.Entity
         public ICollection<InitialDetail>? InitialDetails { get; set; }
         public ICollection<HsmInformation>? HsmInformation { get; set; }
         public ICollection<SignerDocType>? SignerDocTypes { get; set; }
-        public ICollection<UserRole>? UserRoles { get; set; }
-
+        public ICollection<UserRole>? UserRoles { get; set; } = new List<UserRole>();
+        public ICollection<UserLoginToken>? UserLoginTokens { get; set; } = new List<UserLoginToken>();
 
     }
 }

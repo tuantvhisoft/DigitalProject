@@ -16,6 +16,7 @@
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore, Version=6.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
     <None Remove="VModel\" />
     <None Remove="VModel\Paging\" />
+    <None Remove="Accessors\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IRepositories\" />
@@ -25,6 +26,7 @@
     <Folder Include="UnitOfWork\" />
     <Folder Include="VModel\" />
     <Folder Include="VModel\Paging\" />
+    <Folder Include="Accessors\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.2.2" />
