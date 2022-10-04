@@ -3,7 +3,7 @@ namespace DS.ViewModel.Accessors
 {
     public interface IUserAccessor
     {
-        string GetUserId();
+        Guid GetUserId();
         string GetUserEmail();
         //Task<CreatedByDto?> GetCreatedInfo(DateTime CreatedAt, string userId);
         //Task<LastModifiedByDto?> GetLastModifiedInfo(DateTime? LastModifiedAt, string? userId);

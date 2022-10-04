@@ -5,7 +5,7 @@ namespace DS.ViewModel.IRepositories
 {
     public interface IRepositoryBase<T> where T : class
     {
-        Task<T?> GetByIdAsync(string id);
+        Task<T?> GetByIdAsync(Guid id);
         Task<T?> GetFirstOrDefaultAsync(Expression<Func<T, bool>> expression);
         Task<IReadOnlyList<T>> GetAllAsync();
         IQueryable<T> GetIQueryable();

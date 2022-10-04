@@ -55,10 +55,10 @@ namespace DS.Service.Sercurity
             return _httpContextAccessor.HttpContext!.User.FindFirst(ClaimTypes.Email)!.Value;
         }
 
-        public string GetUserId()
+        public Guid GetUserId()
         {
             string userId = _httpContextAccessor.HttpContext!.User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
-            return userId;
+            return Guid.TryParse(userId, out Guid id) ? id : default;
         }
     }
 }

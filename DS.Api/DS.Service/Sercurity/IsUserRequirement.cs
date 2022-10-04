@@ -25,7 +25,7 @@ namespace DS.Service.Sercurity
 
             if (claimUserId == null) return Task.CompletedTask;
 
-            var userId = claimUserId.Value;
+            var userId = Guid.TryParse(claimUserId.Value, out Guid id) ? id : default;
 
             if (userId == default) return Task.CompletedTask;
 

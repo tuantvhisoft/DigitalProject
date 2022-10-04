@@ -32,7 +32,7 @@ namespace DS.Service
 
         public async Task<UserViewModel> GetCurrentUser()
         {
-            string userId = _userAccessor.GetUserId();
+            Guid userId = _userAccessor.GetUserId();
 
             var user = await _unitOfWork.Users.GetByIdAsync(userId);
 
@@ -72,7 +72,7 @@ namespace DS.Service
         {
             var refreshToken = _httpContextAccessor.HttpContext!.Request.Cookies["refreshToken"];
 
-            string userId = _userAccessor.GetUserId();
+            Guid userId = _userAccessor.GetUserId();
 
             var user = await _unitOfWork.Users.GetIQueryable()
                 .Include(x => x.UserLoginTokens).FirstOrDefaultAsync(x => x.Id == userId);

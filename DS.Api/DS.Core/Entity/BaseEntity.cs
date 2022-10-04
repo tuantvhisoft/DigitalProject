@@ -8,6 +8,6 @@ namespace DS.Core.Entity
 {
     public abstract class BaseEntity
     {
-        public virtual string? Id { get; set; }
+        public virtual Guid Id { get; set; }
     }
 }

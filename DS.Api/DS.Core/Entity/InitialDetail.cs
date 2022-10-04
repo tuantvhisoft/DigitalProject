@@ -10,7 +10,7 @@ namespace DS.Core.Entity
     {
         public int InitialDetailId { get; set; }
         public int InitialSignerId { get; set; }
-        public string? UserId { get; set; }
+        public Guid UserId { get; set; }
         public string? Message { get; set; }
         public string? DetailStatus { get; set; }
         public User? User { get; set; }
