@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DS.Core.EF
 {
-    public class DsDbContext : IdentityDbContext<User, Role, string>
+    public class DsDbContext : DbContext
     {
         public DsDbContext(DbContextOptions options) : base(options)
         {
