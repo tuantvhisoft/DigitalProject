@@ -14,9 +14,6 @@ namespace DS.Core.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            ////Configure using Fluent API
-        
-
             modelBuilder.ApplyConfiguration(new DocumentConfiguration());
             modelBuilder.ApplyConfiguration(new DocumentTypeConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
@@ -52,8 +49,5 @@ namespace DS.Core.EF
         public DbSet<Status> Statuses { get; set; }
         public DbSet<HsmExpireTime> HsmExpireTimes { get; set; }
         public DbSet<HsmInformation> HsmInformations { get; set; }
-
-
-
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using DS.Core.EF;
+using DS.ViewModel.IRepositories;
+using DS.ViewModel.Repositories;
 
 namespace DS.ViewModel.UnitOfWork
 {
@@ -8,10 +10,10 @@ namespace DS.ViewModel.UnitOfWork
         protected readonly DsDbContext _context;
 
         
-        //private IRoleRepository? _roles;
-        //private IUserLoginTokenRepository? _userLoginTokens;
-        //private IUserRepository? _users;
-        //private IUserRoleRepository? _userRoles;
+        private IRoleRepository? _roles;
+        private IUserLoginTokenRepository? _userLoginTokens;
+        private IUserRepository? _users;
+        private IUserRoleRepository? _userRoles;
 
         public UnitOfWork(DsDbContext context)
         {
@@ -19,13 +21,13 @@ namespace DS.ViewModel.UnitOfWork
         }
 
 
-        //public IRoleRepository Roles => _roles ??= new RoleRepository(_context);
+        public IRoleRepository Roles => _roles ??= new RoleRepository(_context);
 
-        //public IUserLoginTokenRepository UserLoginTokens => _userLoginTokens ??= new UserLoginTokenRepository(_context);
+        public IUserLoginTokenRepository UserLoginTokens => _userLoginTokens ??= new UserLoginTokenRepository(_context);
 
-        //public IUserRepository Users => _users ??= new UserRepository(_context);
+        public IUserRepository Users => _users ??= new UserRepository(_context);
 
-        //public IUserRoleRepository UserRoles => _userRoles ??= new UserRoleRepository(_context);
+        public IUserRoleRepository UserRoles => _userRoles ??= new UserRoleRepository(_context);
 
 
         public void Dispose()
