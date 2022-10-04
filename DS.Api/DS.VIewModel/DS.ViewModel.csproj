@@ -17,6 +17,7 @@
     <None Remove="VModel\" />
     <None Remove="VModel\Paging\" />
     <None Remove="Accessors\" />
+    <None Remove="Interface\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IRepositories\" />
@@ -27,6 +28,7 @@
     <Folder Include="VModel\" />
     <Folder Include="VModel\Paging\" />
     <Folder Include="Accessors\" />
+    <Folder Include="Interface\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.2.2" />

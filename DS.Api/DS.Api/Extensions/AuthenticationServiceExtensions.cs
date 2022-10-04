@@ -13,40 +13,40 @@ namespace DS.Api.Extensions
     {
         public static IServiceCollection AddAuthenticationServices(this IServiceCollection services, IConfiguration config)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
+            //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = key,
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
-                        ValidateLifetime = true,
-                        ClockSkew = TimeSpan.Zero,
-                    };
-                });
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(options =>
+            //    {
+            //        options.TokenValidationParameters = new TokenValidationParameters
+            //        {
+            //            ValidateIssuerSigningKey = true,
+            //            IssuerSigningKey = key,
+            //            ValidateIssuer = false,
+            //            ValidateAudience = false,
+            //            ValidateLifetime = true,
+            //            ClockSkew = TimeSpan.Zero,
+            //        };
+            //    });
 
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("IsAdmin", policy =>
-                {
-                    policy.Requirements.Add(new IsAdminRequirement());
-                });
-                options.AddPolicy("IsUser", policy =>
-                {
-                    policy.Requirements.Add(new IsUserRequirement());
-                });
-            });
+            //services.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("IsAdmin", policy =>
+            //    {
+            //        policy.Requirements.Add(new IsAdminRequirement());
+            //    });
+            //    options.AddPolicy("IsUser", policy =>
+            //    {
+            //        policy.Requirements.Add(new IsUserRequirement());
+            //    });
+            //});
 
-            //services.AddTransient<IAuthorizationHandler, IsModeratorRequirementHandle>();
-            //services.AddTransient<IAuthorizationHandler, IsStaffRequirementHandle>();
+            //services.AddTransient<IAuthorizationHandler, IsAdminRequirement>();
+            //services.AddTransient<IAuthorizationHandler, IsUserRequirement>();
 
-            services.AddHttpContextAccessor();
+            //services.AddHttpContextAccessor();
 
-            services.AddTransient<IUserAccessor, UserAccessor>();
+            //services.AddTransient<IUserAccessor, UserAccessor>();
             //services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
 

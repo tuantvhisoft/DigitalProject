@@ -10,9 +10,9 @@ namespace DS.Api.Extensions
 {
     public static class ApplicationServiceExtensions
     {
-        [Obsolete]
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             services.AddControllers().AddNewtonsoftJson(options =>
                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
            ).AddFluentValidation(options =>
@@ -20,6 +20,7 @@ namespace DS.Api.Extensions
                options.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
                options.DisableDataAnnotationsValidation = true;
            });
+#pragma warning restore CS0618 // Type or member is obsolete
 
             services.AddEndpointsApiExplorer();
 

@@ -17,7 +17,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger(options => options.RouteTemplate = "swagger/{documentName}/swagger.json");
     app.UseSwaggerUI(options =>
     {
-        options.DocumentTitle = "TGProV3 - API";
+        options.DocumentTitle = " DS - API";
         options.SwaggerEndpoint($"/swagger/v1/swagger.json", $"v1");
     });
 }
