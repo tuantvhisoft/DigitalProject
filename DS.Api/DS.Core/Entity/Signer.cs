@@ -11,7 +11,7 @@ namespace DS.Core.Entity
         public int SignerId { get; set; }
         public int InitialSignerId { get; set; }
         public int DocumentId { get; set; }
-        public string? UserId { get; set; }
+        public Guid UserId { get; set; }
         public string? Status { get; set; }
         public float InWidth { get; set; }
         public float InHeight { get; set; }
